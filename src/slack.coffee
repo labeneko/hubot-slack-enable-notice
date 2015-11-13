@@ -259,6 +259,10 @@ class SlackBot extends Adapter
             msg = msg.substring(breakIndex, msg.length)
 
         channel.send m for m in submessages
+  
+  notice: (envelope, messages...) ->
+    for msg in messages
+      @send envelope, "_#{msg}_"
 
   reply: (envelope, messages...) ->
     @robot.logger.debug "Sending reply"

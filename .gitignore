@@ -1,1 +1,4 @@
 node_modules/
+pom.xml
+hubot-slack-enable-notice.iml
+spring-config.xml
